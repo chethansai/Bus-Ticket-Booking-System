@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  background-image:url('bus.jpg');
+  height:"100";
+  width:"100";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Payment page</title>
+</head>
+<body><center>
+
+	<h1 style="color: white; font-size: 40px;">
+		<i>PAYMENT PAGE</i><br><br><br><br>
+	</h1>
+	<form method="post" action="/BTMS1/payment">
+	<table>
+                <h3><tr><td><b><i>Card Number</i></b></td><td>:</td><td><input type="text" name="fname" id="fname" required></td></tr><br>
+                <tr><td><b><i>Expiry</i></b></td><td>:</td><td><input type="text" name="lname" id="lname" required></td></tr>
+                <tr><td><b><i>CVV</i></b></td><td>:</td><td><input type="password" name="mno" id="mno" required></td></tr></h3>
+		<tr><td></td><td></td><td colspan=3><input type='Submit' style="width: 170px; height: 30px; font-size: 20px;" value='PAY' ></td></tr></h3></table>
+		<br><br><br><br>
+	</form>
+	<form method="post" action="/BTMS1/logoutsession">
+		<button type="submit"
+			style="width: 100px; height: 30px; font-size: 20px;">
+			<i>LOGOUT</i>
+		</button>
+		
+	</form>
+	<br><br><br><br><br><br><br><br><br>
+</center></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <style>
+body{
+  background-image:url('bus.jpg');
+  height:"100";
+  width:"100";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+        <title>Edit bus details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <br><br><br><br>
+    <center><h1 style="color:white;font-size:40px;"><i>EDIT BUS DETAILS</i></h1>
+        <form method="post" action="/BTMS1/editbusdetails">
+            <table>
+                <h3><tr><td><b><i>Bus Number</i></b></td><td>:</td><td><input type="number" name="busno"></td></tr><br>
+                <tr><td><b><i>Source</i></b></td><td>:</td><td><input type="text" name="source"></td></tr>
+                <tr><td><b><i>Destination</i></b></td><td>:</td><td><input type="text" name="dest"></td></tr>
+                <tr><td><b><i>Departure date</i></b></td><td>:</td><td><input type="text" name="dept"></td></tr><br>
+                <tr><td><b><i>Seats Available</i></b></td><td>:</td><td><input type="number" name="seats"></td></tr><br>
+                <tr><td><b><i>Price</i></b></td><td>:</td><td><input type="number" name="price"></td></tr><br>
+                <tr><td></td><td></td><td colspan=3><input type='Submit' style="width: 170px; height: 30px; font-size: 20px;" value='Edit Details'></td></tr></h3>
+            </table>
+        </form>
+    </center>
+       
+    </body>
+    </html>

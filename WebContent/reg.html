@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<style>
+body{
+  background-image:url('bus.jpg');
+  height:"100";
+  width:"100";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<script type='text/javascript'>
+function validate()
+{
+var n=new RegExp("^[A-Za-z]{1,45}$","g");
+var p=new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$" ,"g");
+var ph=new RegExp("[0-9]{10}","g");
+var mail=new RegExp("^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})$","g");
+na=document.getElementById('uid').value;
+pa=document.getElementById('pwd').value;
+pho=document.getElementById('mno').value;
+ma=document.getElementById('email').value;
+//var add=document.getElementById('adid').value;
+
+if(!(na.match(n))){
+alert("invalid user name");
+return false;}
+if(!(pa.match(p))){
+alert("invalid password");
+return false;}
+if(!(pho.match(ph))){
+alert("invalid phone number");
+return false;}
+if(!(ma.match(mail))){
+alert("invalid mail id");
+return false;}
+//if(add=="")
+//alert("invalid address");
+return true;
+}</script>
+
+<html>
+    <head>
+        <title>Bus Management</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <br><br><br><br>
+    <center><h1 style="color:white;font-size:40px;"><i>REGISTRATION FORM</i></h1>
+        <form action="/BTMS1/regServ1" method="post" onSubmit="return validate()">
+            <table>
+                <h3><tr><td><b><i>First Name</i></b></td><td>:</td><td><input type="text" name="fname" id="fname" required></td></tr><br>
+                <tr><td><b><i>Last Name</i></b></td><td>:</td><td><input type="text" name="lname" id="lname" required></td></tr>
+                <tr><td><b><i>Mobile number</i></b></td><td>:</td><td><input type="text" name="mno" id="mno" required></td></tr>
+                <tr><td><b><i>Email</i></b></td><td>:</td><td><input type="text" name="email" id="email" required></td></tr><br>
+                <tr><td><b><i>User Id</i></b></td><td>:</td><td><input type="text" name="uid" id="uid" required></td></tr><br>
+                <tr><td><b><i>Password</i></b></td><td>:</td><td><input type="text" name="pwd" id="pwd" required></td></tr><br>
+                <tr><td></td><td></td><td colspan=3><input type='Submit' style="width: 170px; height: 30px; font-size: 20px;" value='Register' ></td></tr></h3>
+            </table>
+        </form>
+    </center>
+       
+    </body>
+</html>
